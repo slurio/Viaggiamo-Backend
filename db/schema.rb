@@ -22,6 +22,9 @@ ActiveRecord::Schema.define(version: 2020_10_16_144850) do
 
   create_table "messages", force: :cascade do |t|
     t.string "description"
+    t.string "language"
+    t.string "voice"
+    t.string "content"
     t.integer "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
