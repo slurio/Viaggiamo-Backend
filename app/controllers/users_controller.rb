@@ -1,48 +1,36 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
-  # GET /users
-  def index
-    @users = User.all
-
-    render json: @users
-  end
-
-  # GET /users/1
   def show
     render json: @user
   end
 
-  # POST /users
   def create
     user = User.find_by(username: params[:user][:username])
     if user
       render json: user
     else
       new_user = User.create(username: params[:user][:username])
-      new_user.bio = ''
+      new_user.bio = 'Add some information about yourself!'
       render json: new_user
     end
-    # @user = User.new(user_params)
-
-    # if @user.save
-    # else
-    #   render json: @user.errors, status: :unprocessable_entity
-    # end
   end
 
-  # PATCH/PUT /users/1
   def update
+
+    if params[:file]
+      # The data is a file upload coming from <input type="file" />
+      @user.img.attach(params[:file])
+      # Generate a url for easy display on the front end 
+      photo = url_for(@user.img)
+    end
+
     if @user.update(user_params)
       render json: @user
     else
       render json: @user.errors, status: :unprocessable_entity
     end
-  end
 
-  # DELETE /users/1
-  def destroy
-    @user.destroy
   end
 
   private
@@ -53,6 +41,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:username, :bio, :categories)
+      params.require(:user).permit(:username, :bio, :img)
     end
 end
