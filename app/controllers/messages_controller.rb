@@ -26,11 +26,15 @@ class MessagesController < ApplicationController
 
   # PATCH/PUT /messages/1
   def update
-    if @message.update(message_params)
-      render json: @message
-    else
-      render json: @message.errors, status: :unprocessable_entity
-    end
+    message = Message.find(params[:id])
+    message.update(message_params)
+
+    render json: message
+    # if @message.update(message_params)
+    #   render json: @message
+    # else
+    #   render json: @message.errors, status: :unprocessable_entity
+    # end
   end
 
   # DELETE /messages/1
@@ -46,6 +50,6 @@ class MessagesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def message_params
-      params.require(:message).permit(:description, :category_id)
+      params.require(:message).permit(:description, :content, :category_id)
     end
 end
