@@ -70,3 +70,7 @@ message2 = Message.create(description: 'Closest Bathroom', category: cat2, langu
 message5 = Message.create(description: 'Closest Hotel', category: cat2, language: 'French', voice: 'Amelie', content:'mon ami')
 message6 = Message.create(description: 'some water please', category: cat4, language: 'Italian', voice: 'Luca', content: 'Ciao Bella')
 message7 = Message.create(description: 'what time is it?', category: cat5, language: 'Spanish', voice: 'Jorge', content: 'Mira mira')
+message2 = Message.create(description: 'Closest Bathroom', category: cat2, language: 'fr', voice: 'Amelie', content:'bonjour')
+message5 = Message.create(description: 'Closest Hotel', category: cat2, language: 'fr', voice: 'Amelie', content:'mon ami')
+message6 = Message.create(description: 'some water please', category: cat4, language: 'it', voice: 'Luca', content: 'Ciao Bella')
+message7 = Message.create(description: 'what time is it?', category: cat5, language: 'es', voice: 'Jorge', content: 'Mira mira')
