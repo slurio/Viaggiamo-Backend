@@ -15,12 +15,19 @@ class CategoriesController < ApplicationController
 
   # POST /categories
   def create
-    @category = Category.new(category_params)
+  
+    category = Category.find_by(title: params[:category][:title])
 
-    if @category.save
-      render json: @category, status: :created, location: @category
+    if category
+      message = Message.create(category: category, description: params[:message][:description], language: params[:message][:language], voice: params[:message][:voice], content: params[:message][:content])
+      
+      render json: category
     else
-      render json: @category.errors, status: :unprocessable_entity
+      new_category = Category.create(title: params[:category][:title], user_id: params[:currentUser][:id])
+      
+      message = Message.create(category: new_category, description: params[:message][:description], language: params[:message][:language], voice: params[:message][:voice], content: params[:message][:content])
+      
+      render json: new_category
     end
   end
 
