@@ -4,7 +4,6 @@ class CreateLessons < ActiveRecord::Migration[6.0]
       t.string :language
       t.string :question
       t.string :answer
-      t.integer :level
 
       t.timestamps
     end

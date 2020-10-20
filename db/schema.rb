@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(version: 2020_10_19_013338) do
     t.string "language"
     t.string "question"
     t.string "answer"
-    t.integer "level"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -67,6 +66,10 @@ ActiveRecord::Schema.define(version: 2020_10_19_013338) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "bio", default: "Add some information about yourself!"
+    t.integer "spanish", default: 0
+    t.integer "german", default: 0
+    t.integer "french", default: 0
+    t.integer "italian", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

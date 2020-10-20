@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     if user
       render json: user
     else
+      byebug
       new_user = User.create(user_params)
       render json: new_user
     end
@@ -35,6 +36,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:username, :bio)
+      params.require(:user).permit(:username, :bio, :spanish, :french, :italian, :german)
     end
 end

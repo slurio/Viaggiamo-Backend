@@ -1,10 +1,10 @@
 class UserSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
 
-  attributes :id, :username, :bio, :categories, :avatar_url
+  attributes :id, :username, :bio, :spanish, :french, :german, :italian, :categories, :avatar_url
 
   def categories
-    ActiveModel::SerializableResource.new(object.categories,  each_serializer: CategorySerializer)
+    ActiveModelSerializers::SerializableResource.new(object.categories,  each_serializer: CategorySerializer)
   end
 
   def avatar_url
