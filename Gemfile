@@ -5,12 +5,16 @@ ruby '2.6.1'
 
 # added gems:
 gem 'active_model_serializers'
+gem 'faker'
+gem 'pg'
+gem 'http'
+gem 'net'
+gem 'httparty'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.4'
-gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
