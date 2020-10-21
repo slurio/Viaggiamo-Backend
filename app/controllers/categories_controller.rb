@@ -21,13 +21,13 @@ class CategoriesController < ApplicationController
     if category
       message = Message.create(category: category, description: params[:message][:description], language: params[:message][:language], voice: params[:message][:voice], content: params[:message][:content])
       
-      render json: category
+      render json: Category.where(user_id: params[:currentUser][:id])
     else
       new_category = Category.create(title: params[:category][:title], user_id: params[:currentUser][:id])
       
       message = Message.create(category: new_category, description: params[:message][:description], language: params[:message][:language], voice: params[:message][:voice], content: params[:message][:content])
       
-      render json: new_category
+      render json: Category.where(user_id: params[:currentUser][:id])
     end
   end
 

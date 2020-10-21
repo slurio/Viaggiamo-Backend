@@ -15,10 +15,10 @@ user1 = User.create(username: 'matt', bio: 'bio1')
 user2 = User.create(username: 'sam', bio: 'bio2')
 
 cat1 = Category.create(title: 'title1', user: user1)
-cat2 = Category.create(title: 'French', user: user2)
+cat2 = Category.create(title: 'French Phrases', user: user2)
 cat3 = Category.create(title: 'title2', user: user1)
-cat4 = Category.create(title: 'Italian', user: user2)
-cat5 = Category.create(title: 'Spanish', user: user2)
+# cat4 = Category.create(title: 'Italian', user: user2)
+# cat5 = Category.create(title: 'Spanish', user: user2)
 
 # lessons data
 
@@ -66,11 +66,11 @@ Lesson.create(language: 'Italian', question: "Non ho il pranzo.", answer: "I do 
 Lesson.create(language: 'Italian', question: "A lion eats a mouse.", answer: "Un leone mangia il topo.|Il leone mangia un topo.|Un leone mangia un topo.|3")
 Lesson.create(language: 'Italian', question: "Loro sono ragazze.", answer: "They are girls.")
 
-message2 = Message.create(description: 'Closest Bathroom', category: cat2, language: 'French', voice: 'Amelie', content:'bonjour')
-message5 = Message.create(description: 'Closest Hotel', category: cat2, language: 'French', voice: 'Amelie', content:'mon ami')
-message6 = Message.create(description: 'some water please', category: cat4, language: 'Italian', voice: 'Luca', content: 'Ciao Bella')
-message7 = Message.create(description: 'what time is it?', category: cat5, language: 'Spanish', voice: 'Jorge', content: 'Mira mira')
-message2 = Message.create(description: 'Closest Bathroom', category: cat2, language: 'fr', voice: 'Amelie', content:'bonjour')
-message5 = Message.create(description: 'Closest Hotel', category: cat2, language: 'fr', voice: 'Amelie', content:'mon ami')
-message6 = Message.create(description: 'some water please', category: cat4, language: 'it', voice: 'Luca', content: 'Ciao Bella')
-message7 = Message.create(description: 'what time is it?', category: cat5, language: 'es', voice: 'Jorge', content: 'Mira mira')
+# message2 = Message.create(description: 'Closest Bathroom', category: cat2, language: 'French', voice: 'Amelie', content:'bonjour')
+# message5 = Message.create(description: 'Closest Hotel', category: cat2, language: 'French', voice: 'Amelie', content:'mon ami')
+# message6 = Message.create(description: 'some water please', category: cat4, language: 'Italian', voice: 'Luca', content: 'Ciao Bella')
+# message7 = Message.create(description: 'what time is it?', category: cat5, language: 'Spanish', voice: 'Jorge', content: 'Mira mira')
+# message2 = Message.create(description: 'Closest Bathroom', category: cat2, language: 'fr', voice: 'Amelie', content:'bonjour')
+# message5 = Message.create(description: 'Closest Hotel', category: cat2, language: 'fr', voice: 'Amelie', content:'mon ami')
+# message6 = Message.create(description: 'some water please', category: cat4, language: 'it', voice: 'Luca', content: 'Ciao Bella')
+# message7 = Message.create(description: 'what time is it?', category: cat5, language: 'es', voice: 'Jorge', content: 'Mira mira')
