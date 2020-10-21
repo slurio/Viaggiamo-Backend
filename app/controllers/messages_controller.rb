@@ -1,17 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :set_message, only: [:show, :update, :destroy]
-
-  # GET /messages
-  def index
-    @messages = Message.all
-
-    render json: @messages
-  end
-
-  # GET /messages/1
-  def show
-    render json: @message
-  end
+  before_action :set_message, only: [:update, :destroy]
 
   # POST /messages
   def create
@@ -30,11 +18,6 @@ class MessagesController < ApplicationController
     message.update(message_params)
 
     render json: message
-    # if @message.update(message_params)
-    #   render json: @message
-    # else
-    #   render json: @message.errors, status: :unprocessable_entity
-    # end
   end
 
   # DELETE /messages/1
