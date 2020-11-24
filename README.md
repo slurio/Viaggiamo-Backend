@@ -1,27 +1,29 @@
-# README
+# Viaggiamo
 
-test
+Lock downs are back in effect and you have now finished everything on Netflix and no new Tiger King is insight. There is no better time than now to learn a new language for your post Covid trip abroad! Viaggamo provides lessons, games, and translator feature for Spanish, French, Italian, and German.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Video Demo
 
-Things you may want to cover:
+Comming Soon...
 
-* Ruby version
+## Try It Live
 
-* System dependencies
+Coming Soon...
 
-* Configuration
+## Dev Tools
 
-* Database creation
+#### Frontend
 
-* Database initialization
+- React.js
+- Web Speech API
+- Google Translate API
+- React Bootstrap
+- Styled-Components
+- Custom CSS
 
-* How to run the test suite
+#### [Backend](https://github.com/slurioViaggiamo-Frontend)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# Viaggiamo-Backend
+- Ruby on Rails
+- PostgreSQL
+- Active Model Seriazliers
+- Active Storage
