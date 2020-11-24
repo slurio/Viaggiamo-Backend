@@ -21,7 +21,7 @@ Coming Soon...
 - Styled-Components
 - Custom CSS
 
-#### [Backend](https://github.com/slurioViaggiamo-Frontend)
+#### [Backend](https://github.com/slurio/Viaggiamo-Frontend)
 
 - Ruby on Rails
 - PostgreSQL
