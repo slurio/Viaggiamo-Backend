@@ -12,7 +12,7 @@ Coming Soon...
 
 ## Dev Tools
 
-#### Frontend
+#### [Frontend](https://github.com/slurio/Viaggiamo-Frontend)
 
 - React.js
 - Web Speech API
@@ -21,7 +21,7 @@ Coming Soon...
 - Styled-Components
 - Custom CSS
 
-#### [Backend](https://github.com/slurio/Viaggiamo-Frontend)
+#### Backend
 
 - Ruby on Rails
 - PostgreSQL
