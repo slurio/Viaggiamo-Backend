@@ -47,7 +47,8 @@ A user can:
 
 ## Installation Instructions
 
-#### [Frontend](https://github.com/slurio/Viaggiamo-Frontend)- Run npm install
+#### [Frontend](https://github.com/slurio/Viaggiamo-Frontend)
+- Run npm install
 - Run npm start
 
 #### Backend
